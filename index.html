@@ -4,156 +4,160 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device width, initial-scale=1.0">
 	<title>Tech Documentation</title>
-
+    <!-- import Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<nav id="navbar">
-  <header id="subject"><code>HTML Basics</code></header>
-		<ul>
-			<li><a class="nav-link" href="#What_is_HTML?">What is HTML?</a></li>
-			<li><a class="nav-link" href="#Tag_Attributes">Tag Attributes</a></li>
-			<li><a class="nav-link" href="#Basic_Structure">Basic Structure</a></li>
-			<li><a class="nav-link" href="#Structure_v._Style">Structure v. Style</a></li>
-			<li><a class="nav-link" href="#Text_FX">Text FX</a></li>
-			<li><a class="nav-link" href="#Creating_Links">Creating Links</a></li>
-			<li><a class="nav-link" href="#Make_a_List">Make a List</a></li>
-			<li><a class="nav-link" href="#Using_Special_Characters">Using Special Characters</a></li>
-		<li><a class="nav-link" href="#Adding_Images">Adding Images</a></li>
-		<li><a class="nav-link" href="#An_HTML_Skeleton">An HTML Skeleton</a></li></ul>
-</nav>
-<main id="main-doc">
-  <header id="main-header"><code>The Quick & Dirty of HTML</code></header>
-	<section class="main-section" id="What_is_HTML?">
-		<header>What is HTML?</header>
-		<article>
-			<p>HTML stands for Hypertext Markup Language. <em>Hypertext</em> refers to text that, when selected, can take you to another webpage. <em>Markup</em> is a set of instructions that specifies how a web page should be displayed in a web browser. <em>Language</em> in this case refers to the set of codes that comprise the markup of a page</p>
-			<p>Markup codes called <em>tags</em> specify the structure of the webpage. These act as containers for text and images.</p>
-		</article>
-	</section>
-	<section class="main-section" id="Tag_Attributes">
-		<header>Tag Attributes</header>
-		<article>
-			<p>Tags can be modified for specificity that determines size, style or function. By using tags such as <code>class</code>, <code>id</code>, <code>type</code> and <code>href</code>, you lay out a structure that can be easily stylized.</p>
-		</article>
-	</section>
-	<section class="main-section" id="Basic_Structure">
-		<header>Basic Structure</header>
-		<article>
-			<p>Every web page will begin with a <em>Doctype declaration</em> that tells the browser that this is an HTML page.</p>
-			<p>This appears as <code>&lt;!DOCTYPE html&gt;</code></p>
-			<p>Following this is the line <code>&lt;html lang="eng"&gt;</code>, which tells the web browser two things: the type of file (HTML), as well as a language attribute (English).</p>
-			<p>After these declarations, the head and the body are the first level of organization for HTML. The head will feature other declarations, such as the font style, symbols that can be used, associated style sheets and the page's title. A title allows the page to be found in a web search</p>
-			<p>The body of the page is what will actually be seen by the user - text, images, and other graphics. The body will be further subdivided with tags that help to structure the layout of the page.</p>
-		</article>
-	</section>
-	<section class="main-section" id="Structure_v._Style">
-		<header>Structure v. Style</header>
-		<article>
-			<p>It is important to separate the structure of a web page from its styling. HTML provides the structure, and CSS handles the styling. Structure is broken down to the level of sentences, words, and even characters, in addition to blocks that may be immediately apparent.</p>
-			<p>Some HTML tags already have predefined styling, that one should be aware of. However, even these elements can be further stylized using CSS.</p>
-		</article>
-	</section>
-	<section class="main-section" id="Text_FX">
-		<header>Text FX</header>
-		<article>
-			<p>HTML has a few tags that add structure to text, but which should be based on the meaning you wish the text to convey</p>
-			<p>For example, if you wish to put emphasis on a particular word so that the user reads it as such, you will use the tag <code>&lt;em&gt;</code>. Text will be rendered in <em>italics</em></p>
-			<p>To mark important text that you don't want readers to miss, you might want it to appear in <strong>bold</strong>. This is done by using the tag &lt;strong&gt;.</p>
-			<p>When dividing your page into sections, sometimes it is desirable to use headings. HTML uses various tags in order to display text that may be bigger or appear in bold typeface. There are six HTML heading tags, starting with <code>&lt;h1&gt;</code> and ending with <code>&lt;h6&gt;</code>.</p>
-		</article>
-	</section>
-	<section class="main-section" id="Creating_Links">
-		<header>Creating Links</header>
-		<article>
-			<p>This is where hypertext comes in. Creating links can direct a user to another part of your web page or to external pages.</p>
-			<p>The tag associated with links is <code>&lt;a&gt;</code>. An attribute within this tag is <code>href="URL"</code>. Descriptive link text is placed between the anchor tags.</p>
-      <p>So for example, this line of code:</p>
-      <code id="example">&lt;a href="https://html.com/"&gt;html.com&lt;/a&gt;</code>
-      <p>will take you to <a href="https://html.com/" target="_blank">html.com.</a></p>
-			<p>To link to another part of your own web page, the href will be a # followed by the <code>id</code> of that section of the page.</p>
-		</article>
-	</section>
-	<section class="main-section" id="Make_a_List">
-		<header>Make a List</header>
-		<article>
-			<p>Another element that is structural but also stylistic is a list. With HTML you can create bulleted and numbered lists. These are know as unordered lists (<code>&lt;ul&gt;</code>) and ordered lists (<code>&lt;ol&gt;</code>).</p>
-			<p>An unordered list consists of the <code>&lt;ul&gt;</code> tag and list items with the tag <code>&lt;li&gt;</code> are nested within. So a bulleted, unordered list such as:</p>
-			
-			<p>Foods I like:</p>
-			<ul id="example-ul" style="list-style-type: disc">
-				<li>Dark chocolate</li>
-				<li>Cheddar cheese</li>
-				<li>Strawberries</li>
-			</ul>
-			<p>will be coded in this manner:</p>
-			
-			<p><code id="list1">
-				&lt;p&gt;Foods I like:&lt;/p&gt;
-				<br>
-				&lt;ul&gt;
-				<br>
-				&lt;li&gt;Dark chocolate&lt;/li&gt;
-				<br>
-				&lt;li&gt;Cheese&lt;/li&gt;
-				<br>
-				&lt;li&gt;Strawberries&lt;/li&gt;
-				<br>
-				&lt;/ul&gt;
-				<br>
-			</code></p>
-			
-			<p>A numbered, ordered list such as:</p>
-			
-			<p>Foods I don't like:</p>
-			<ol id="example-ol">
-				<li>White chocolate</li>
-				<li>Bleu cheese</li>
-				<li>Papaya</li>
-			</ol>
-			<p>will be coded like this:</p>
-			
-			<p><code id="list2">
-				&lt;p&gt;Foods I don't like:&lt;/p&gt;
-				<br>
-				&lt;ol&gt;
-				<br>
-				&lt;li&gt;White chocolate&lt;/li&gt;
-				<br>
-				&lt;li&gt;Bleu cheese&lt;/li&gt;
-				<br>
-				&lt;li&gt;Papaya&lt;/li&gt;
-				<br>
-				&lt;/ol&gt;
-				<br>
-			</code></p>		
-			
-			<p>Notice that the numbers are automatically assigned simply by using the <code>ol</code> tag.</p>
-		</article>
-	</section>
-	<section class="main-section" id="Using_Special_Characters">
-		<header>Using Special Characters</header>
-		<article>
-			<p>In the head of the document, the line <code>&lt;meta charset="utf-8"&gt;</code> appears and signifies that you are using the UTF character set. This means that you are able to insert any symbol under the son by using a combination of keyboard strokes and specific codes.</p>
-		</article>
-	</section>
-	<section class="main-section" id="Adding_Images">
-		<header>Adding Images</header>
-		<article>
-			<p>To give the page more visual interest, you can insert images in one of threee types: GIF, JPEG and PNG. The <code>&lt;img&gt;</code> tag uses the attribute of <code>&lt;src&gt;</code> (the image source) and <code>&lt;alt&gt;</code> (descriptive text that is used for accessibility).</p>
-		</article>
-	</section>
-	<section class="main-section" id="An_HTML_Skeleton">
-		<header>An HTML Skeleton</header>
-		<article>
-			<p>A high level of structure in HTML documents is imperative in order to be user-friendly. Just as the words you are reading now are separated and made intelligible with spaces between words, punctuation between sentences, and blocks of text such as paragraphs, tags are used to define the layout of a web page.</p>
-			<p>Tags such as <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code>, and <code>&lt;footer&gt;</code> can divide the page into containers that help to divide content in a logical way.</p>
-		</article>
-	</section>
-<section>
-<header>Reference</header>
-  <p>This information was compiled using <em>Web Coding and Development for Dummies.</em></p>
-  </section>
-</main>
+    <nav id="navbar">
+    <h2 id="subject">HTML Basics</h2>
+            <ul>
+                <li><a class="nav-link" href="#What_is_HTML?">What is HTML?</a></li>
+                <li><a class="nav-link" href="#Tag_Attributes">Tag Attributes</a></li>
+                <li><a class="nav-link" href="#Basic_Structure">Basic Structure</a></li>
+                <li><a class="nav-link" href="#Structure_v._Style">Structure v. Style</a></li>
+                <li><a class="nav-link" href="#Text_FX">Text FX</a></li>
+                <li><a class="nav-link" href="#Creating_Links">Creating Links</a></li>
+                <li><a class="nav-link" href="#Make_a_List">Make a List</a></li>
+                <li><a class="nav-link" href="#Using_Special_Characters">Using Special Characters</a></li>
+                <li><a class="nav-link" href="#Adding_Images">Adding Images</a></li>
+                <li><a class="nav-link" href="#An_HTML_Skeleton">An HTML Skeleton</a></li>
+            </ul>
+    </nav>
+    <main id="main-doc">
+        <h2 id="main-h2">The Quick & Dirty of HTML</h2>
+            <section class="main-section" id="What_is_HTML?">
+                <h2>What is HTML?</h2>
+                <article>
+                    <p>HTML stands for Hypertext Markup Language. <em>Hypertext</em> refers to text that, when selected, can take you to another webpage. <em>Markup</em> is a set of instructions that specifies how a web page should be displayed in a web browser. <em>Language</em> in this case refers to the set of codes that comprise the markup of a page</p>
+                    <p>Markup codes called <em>tags</em> specify the structure of the webpage. These act as containers for text and images.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Tag_Attributes">
+                <h2>Tag Attributes</h2>
+                <article>
+                    <p>Tags can be modified for specificity that determines size, style or function. By using tags such as <code>class</code>, <code>id</code>, <code>type</code> and <code>href</code>, you lay out a structure that can be easily stylized.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Basic_Structure">
+                <h2>Basic Structure</h2>
+                <article>
+                    <p>Every web page will begin with a <em>Doctype declaration</em> that tells the browser that this is an HTML page.</p>
+                    <p>This appears as <code>&lt;!DOCTYPE html&gt;</code></p>
+                    <p>Following this is the line <code>&lt;html lang="eng"&gt;</code>, which tells the web browser two things: the type of file (HTML), as well as a language attribute (English).</p>
+                    <p>After these declarations, the head and the body are the first level of organization for HTML. The head will feature other declarations, such as the font style, symbols that can be used, associated style sheets and the page's title. A title allows the page to be found in a web search</p>
+                    <p>The body of the page is what will actually be seen by the user - text, images, and other graphics. The body will be further subdivided with tags that help to structure the layout of the page.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Structure_v._Style">
+                <h2>Structure v. Style</h2>
+                <article>
+                    <p>It is important to separate the structure of a web page from its styling. HTML provides the structure, and CSS handles the styling. Structure is broken down to the level of sentences, words, and even characters, in addition to blocks that may be immediately apparent.</p>
+                    <p>Some HTML tags already have predefined styling, that one should be aware of. However, even these elements can be further stylized using CSS.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Text_FX">
+                <h2>Text FX</h2>
+                <article>
+                    <p>HTML has a few tags that add structure to text, but which should be based on the meaning you wish the text to convey</p>
+                    <p>For example, if you wish to put emphasis on a particular word so that the user reads it as such, you will use the tag <code>&lt;em&gt;</code>. Text will be rendered in <em>italics</em></p>
+                    <p>To mark important text that you don't want readers to miss, you might want it to appear in <strong>bold</strong>. This is done by using the tag &lt;strong&gt;.</p>
+                    <p>When dividing your page into sections, sometimes it is desirable to use headings. HTML uses various tags in order to display text that may be bigger or appear in bold typeface. There are six HTML heading tags, starting with <code>&lt;h1&gt;</code> and ending with <code>&lt;h6&gt;</code>.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Creating_Links">
+                <h2>Creating Links</h2>
+                <article>
+                    <p>This is where hypertext comes in. Creating links can direct a user to another part of your web page or to external pages.</p>
+                    <p>The tag associated with links is <code>&lt;a&gt;</code>. An attribute within this tag is <code>href="URL"</code>. Descriptive link text is placed between the anchor tags.</p>
+            <p>So for example, this line of code:</p>
+            <code id="example">&lt;a href="https://html.com/"&gt;html.com&lt;/a&gt;</code>
+            <p>will take you to <a href="https://html.com/" target="_blank">html.com.</a></p>
+                    <p>To link to another part of your own web page, the href will be a # followed by the <code>id</code> of that section of the page.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Make_a_List">
+                <h2>Make a List</h2>
+                <article>
+                    <p>Another element that is structural but also stylistic is a list. With HTML you can create bulleted and numbered lists. These are know as unordered lists (<code>&lt;ul&gt;</code>) and ordered lists (<code>&lt;ol&gt;</code>).</p>
+                    <p>An unordered list consists of the <code>&lt;ul&gt;</code> tag and list items with the tag <code>&lt;li&gt;</code> are nested within. So a bulleted, unordered list such as:</p>
+                    
+                    <p>Foods I like:</p>
+                    <ul id="example-ul" style="list-style-type: disc">
+                        <li>Dark chocolate</li>
+                        <li>Cheddar cheese</li>
+                        <li>Strawberries</li>
+                    </ul>
+                    <p>will be coded in this manner:</p>
+                    
+                    <p><code id="list1">
+                        &lt;p&gt;Foods I like:&lt;/p&gt;
+                        <br>
+                        &lt;ul&gt;
+                        <br>
+                        &lt;li&gt;Dark chocolate&lt;/li&gt;
+                        <br>
+                        &lt;li&gt;Cheese&lt;/li&gt;
+                        <br>
+                        &lt;li&gt;Strawberries&lt;/li&gt;
+                        <br>
+                        &lt;/ul&gt;
+                        <br>
+                    </code></p>
+                    
+                    <p>A numbered, ordered list such as:</p>
+                    
+                    <p>Foods I don't like:</p>
+                    <ol id="example-ol">
+                        <li>White chocolate</li>
+                        <li>Bleu cheese</li>
+                        <li>Papaya</li>
+                    </ol>
+                    <p>will be coded like this:</p>
+                    
+                    <p><code id="list2">
+                        &lt;p&gt;Foods I don't like:&lt;/p&gt;
+                        <br>
+                        &lt;ol&gt;
+                        <br>
+                        &lt;li&gt;White chocolate&lt;/li&gt;
+                        <br>
+                        &lt;li&gt;Bleu cheese&lt;/li&gt;
+                        <br>
+                        &lt;li&gt;Papaya&lt;/li&gt;
+                        <br>
+                        &lt;/ol&gt;
+                        <br>
+                    </code></p>		
+                    
+                    <p>Notice that the numbers are automatically assigned simply by using the <code>ol</code> tag.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Using_Special_Characters">
+                <h2>Using Special Characters</h2>
+                <article>
+                    <p>In the head of the document, the line <code>&lt;meta charset="utf-8"&gt;</code> appears and signifies that you are using the UTF character set. This means that you are able to insert any character in any language by using a combination of keyboard strokes and specific codes.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Adding_Images">
+                <h2>Adding Images</h2>
+                <article>
+                    <p>To give the page more visual interest, you can insert images in one of threee types: GIF, JPEG and PNG. The <code>&lt;img&gt;</code> tag uses the attribute of <code>&lt;src&gt;</code> (the image source) and <code>&lt;alt&gt;</code> (descriptive text that is used for accessibility).</p>
+                </article>
+            </section>
+            <section class="main-section" id="An_HTML_Skeleton">
+                <h2>An HTML Skeleton</h2>
+                <article>
+                    <p>A high level of structure in HTML documents is imperative in order to be user-friendly. Just as the words you are reading now are separated and made intelligible with spaces between words, punctuation between sentences, and blocks of text such as paragraphs, tags are used to define the layout of a web page.</p>
+                    <p>Tags such as <code>&lt;h2&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code>, and <code>&lt;footer&gt;</code> can divide the page into containers that help to divide content in a logical way.</p>
+                </article>
+            </section>
+        <section>
+        <h2>Reference</h2>
+        <p>This information was compiled using <em>Web Coding and Development for Dummies.</em></p>
+        </section>
+    </main>
 </body>
 </html>
