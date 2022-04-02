@@ -1,0 +1,139 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	font-family: monospace;
+  font-size: 18px;
+  min-width: 300px;
+	background-color: rgba(102, 178, 255, 0.9);
+}
+
+#navbar {
+  position: fixed;
+	width: 25%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 2em 0;
+	background-color: rgba(250, 0, 0, 0.78);
+	border-right: solid;
+	border-color: #FFFFFF;
+	z-index: 1;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+
+header {
+	color: white;
+	font-size: 2rem;
+	padding: 0.1em 0.5em;
+  margin-top: 1em
+}
+
+header code {
+  background-color: rgb(102, 178, 255);
+  font-size: 1.7rem;
+  
+}
+
+#navbar ul {
+	height: 85%;
+	padding: 0;
+}
+
+#navbar li {
+	font-size: 1rem;
+	position: relative;
+	border-top: 0.1rem solid;
+	border-color: white;
+	width: 100%;
+}
+
+#navbar a {
+	display: block;
+	padding: 1em;
+	color: white;
+  
+	text-decoration: none;
+}
+
+#navbar a:hover {
+	display: block;
+	background-color: rgb(102, 178, 255);
+	color: white;
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+#main-doc {
+	color: white;
+	position: relative;
+	margin-top: 0vh;
+	margin-left: 25vw;
+}
+
+#main-header code {
+	/*background-color: rgba(250, 0, 0, 0.68);*/
+  color: white;
+  text-justify: center;
+	font-size: 2rem;
+	padding: 0.2em;
+  margin-bottom: 1em;
+}
+
+p {
+	font-size: 1rem;
+  margin: 1em 5em 1em 1em;
+}
+
+code {
+	background-color: rgba(250, 0, 0, 0.68);
+	font-size: 0.9rem;
+}
+
+code #list1 #list2 {
+	background-color: rgba(250, 0, 0, 0.6);
+	font-size: 0.9rem;
+	margin-left: 1.25em;
+	padding: 0;
+}
+
+#example {
+  margin-left: 1.25em;
+}
+
+ul #example-ul {
+	list-style-type: auto;
+}
+
+ol, #example-ol {
+	list-style-type: auto;
+  margin-left: 1.25em;
+}
+
+a {
+  font-style: monospace;
+  color: rgb(245, 50, 50);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 400px) {
+	#navbar {
+		display: none;
+   
+	}
+
+	#main-doc {
+	  position: absolute;
+    width: 100%;
+    margin-left: 0;
+	}
+  
+  
+}
