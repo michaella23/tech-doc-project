@@ -1,7 +1,15 @@
-/* need to organize code, main elements, typography, etc... */
+/* need to organize code, main elements, typography, etc... 
+    need to make nav bar responsive, use media query
+    padding and margins are jacked up
+*/
 
 * {
 	box-sizing: border-box;
+}
+
+pre { /* text automatically centers... find new fix */
+    background-color: #C84B31;
+    opacity: .7;
 }
 
 html, body {
@@ -28,15 +36,23 @@ html, body {
 	overflow-y: scroll;
 }
 
+h2, h3 {
+    padding: 20px;
+}
+
 
 h2 {
-	font-size: 2rem;
-	padding: 0.1em 0.5em;
-    margin-top: 1em
+	font-size: 2.5rem;
+    
 }
 
 h2 code { /* why smaller, not bigger? */
     font-size: 1.7rem;
+}
+
+h3 {
+    color: #C84B31;
+    font-size: 1.5rem;
 }
 
 #navbar ul { /* give ul a class name and target it */
@@ -59,7 +75,7 @@ h2 code { /* why smaller, not bigger? */
 	text-decoration: none;
 }
 
-#navbar a:hover { /* cut repetitiion, add focus state, active state */
+#navbar a:hover, #navbar a:focus { /* cut repetitiion, add focus state, active state */
 	display: block;
     background-color: #C84B31;
 	text-decoration: none;
@@ -84,7 +100,7 @@ ul {
 
 p { /* font-size not necessary, use flexbox for articles for spacing */
 	font-size: 1rem;
-    margin: 1em 5em 1em 1em;
+    margin: 1em;
 }
 
 code {  /* bigger not smaller */
