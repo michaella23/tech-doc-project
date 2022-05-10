@@ -23,8 +23,8 @@ View and navigate the page at different screen sizes
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- GitHub repository: [https://github.com/michaella23/tech-doc-project]
+- Live Site URL: [https://michaella23.github.io/tech-doc-project/]
 
 ## My process
 
