@@ -8,7 +8,6 @@
 }
 
 html, body {
-	font-family: 'Roboto', sans-serif;
     font-size: 18px;
     background-color: #161616;
     color: #F3F0D7;
@@ -16,7 +15,8 @@ html, body {
 
 }
 
-#navbar { /* this should be a class */
+#navBar { 
+	font-family: 'Roboto', sans-serif;
     position: fixed;
 	width: 25%;
 	height: 100%;
@@ -31,38 +31,39 @@ html, body {
 	overflow-y: scroll;
 }
 
-h2, h3 {
-    padding-left: 20px;
-}
+h2, h3 { padding-left: 20px; }
 
 
-h2 {
+h2{
+	font-family: 'Roboto', sans-serif;
 	font-size: 2.5rem;
 	padding: 0 .4em;
 }
-
-h2 code { /* why smaller, not bigger? */
+h2 code{ 
     font-size: 1.7rem;
 }
-
 h3 {
-    color: #C84B31;
-    font-size: 1.5rem;
+	font-family: 'Roboto', sans-serif;
+    color:#C84B31;
+    font-size:1.5rem;
 }
 
 .nav-heading {
 	background-color: #C84B31;
-	margin:0;
+	margin-top:0;
+	margin-right:0;
+	margin-bottom:0;
+	margin-left:0;
 	padding: 1em .5em;
 }
 
-#navbar ul { /* give ul a class name and target it */
+#navBar ul { 
 	height: 85%;
 	padding: 0;
 	margin-top: 0;
 }
 
-#navbar li { /* give these a class name instead */
+#navBar li { 
 	font-size: 1.5rem;
 	position: relative;
 	border-top: 0.1rem solid;
@@ -71,24 +72,25 @@ h3 {
 	padding: 1em 0;
 }
 
-#navbar a { /* is this for all anchors or only navbar? */
+#navBar a { 
 	display: block;
 	padding: .5em;
 	color: inherit;
 	text-decoration: none;
 }
 
-#navbar li:hover, #navbar li:focus { /* cut repetitiion, add focus state, active state */
+#navbar li:hover, #navbar li:focus { 
 	display: block;
     background-color: #C84B31;
 	text-decoration: none;
 }
 
 ul {
-	list-style-type: none;
+list-style-type: none;
 }
 
-#main-doc { /* just use main element or class name */
+#main-doc { 
+	font-family: 'Roboto', sans-serif;
 	position: relative;
 	margin-top: 0;
 	margin-left: 25vw;
@@ -97,19 +99,19 @@ ul {
 	
 }
 
-#main-h2 { /* took out code... flex box? what's happening ? */
+#main-h2 { 
     text-justify: center;
 	font-size: 3rem;
 	padding-left: 0.2em;
     margin-bottom: .5em;
 }
 
-p { /* font-size not necessary, use flexbox for articles for spacing */
+p { 
 	font-size: 1rem;
     margin: 1em;
 }
 
-code {  /* bigger not smaller */
+code {  
 	font-size: 0.9rem;
 }
 
@@ -123,13 +125,13 @@ code {  /* bigger not smaller */
 	margin-left: 1em;
 }
 
-code #list1 #list2 {  /* margins aren't working, if inside flexbox, can center*/
+code #list1 #list2 {  
 	font-size: 0.9rem;
 	margin-left: 2.5em;
 	padding: 0;
 }
 
-#example { /* use flexbox or grid for spacing */
+#example { 
     margin-left: 1.25em;
 }
 
@@ -142,22 +144,22 @@ a {
 
 @media (max-width: 600px) {
 
-    #navbar {
-		padding: 0;
-		width: 100vw;
-		height: 10%;
-	}
+#navbar {
+	padding: 0;
+	width: 100vw;
+	height: 10%;
+}
 
-	#main-doc {
-	    position: absolute;
-        width: 100vw;
-		height: 90%;
-        margin-left: 0;
-		margin-top: 10vh;
-		align-items: center;
-	}
-  
-	.main-section {
-		width: 100vw;
-	}
+#main-doc {
+	position: absolute;
+	width: 100vw;
+	height: 90%;
+	margin-left: 0;
+	margin-top: 10vh;
+	align-items: center;
+}
+
+.main-section {
+	width: 100vw;
+}
 }
